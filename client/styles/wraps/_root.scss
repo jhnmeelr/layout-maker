@@ -23,7 +23,7 @@
         position: absolute;
         top: 53%;
         left: 50%;
-        width: 24vw;
+        width: 24%;
         transform: translate(-50%, -50%);
         .slider {
             margin-bottom: 5.5vh;
@@ -98,6 +98,51 @@
                 }
                 &:nth-child(4n+8) {
                     margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .root {
+        .slider-wrapper {
+            top: 50%;
+            width: 29vw;
+            button {
+                font-size: 4vh;
+                span {
+                    padding: 1vh 2vh;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .root {
+        .slider-wrapper {
+            top: 50%;
+            width: 37vw;
+            button {
+                font-size: 4vh;
+                span {
+                    padding: 1vh 2vh;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .root {
+        .slider-wrapper {
+            top: 50%;
+            width: 62vw;
+            button {
+                font-size: 4vh;
+                span {
+                    padding: 1vh 2vh;
                 }
             }
         }

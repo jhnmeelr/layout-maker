@@ -1,5 +1,5 @@
 // assets
-require('../assets.js');
+require('./assets.js');
 // styles
 require('../styles/style.scss');
 // js
