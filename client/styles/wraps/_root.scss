@@ -1,0 +1,147 @@
+.root {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0px;
+    text-align: center;
+    .logo {
+        position: absolute;
+        top: 4%;
+        width: 100%;
+        height: 30%;
+        max-width: 100%;
+        margin: 0 auto;
+        background-image: url('/assets/images/logo.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%;
+    }
+    .slider-wrapper {
+        position: absolute;
+        top: 53%;
+        left: 50%;
+        width: 24vw;
+        transform: translate(-50%, -50%);
+        .slider {
+            margin-bottom: 5.5vh;
+            font-size: 3.8vh;
+            line-height: 4.5vh;
+            span:first-child {
+                color: #eea10b;
+                font-family: "roboto-black";
+                text-transform: uppercase;
+                // background: url("/assets/images/gold-texture.jpg");
+                background: -webkit-linear-gradient(transparent, transparent), url("/assets/images/gold-texture.jpg");
+                background: -o-linear-gradient(transparent, transparent);
+                background-position: center;
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
+            span:last-child {
+                font-family: "roboto-regular";
+            }
+        }
+        button {
+            font-size: 3.2vh;
+            border: none;
+            border-radius: 4px;
+            text-transform: uppercase;
+            padding: 0.3vh 0.3vh;
+            border-radius: 1vh;
+            outline: none;
+            background: #4c6700; /* Old browsers */
+            background: -moz-linear-gradient(top, #4c6700 0%, #7ea800 50%, #6e9e03 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #4c6700 0%,#7ea800 50%,#6e9e03 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #4c6700 0%,#7ea800 50%,#6e9e03 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            span {
+                display: block;
+                padding: 0vh 2vh;
+                border-radius: 1vh;
+                line-height: 6.5vh;
+                box-shadow: inset 0 0.3vh 0 0 #9dbb56;
+                background: #6e910a; /* Old browsers */
+                background: -moz-linear-gradient(top, #6e910a 0%, #7ea800 50%, #384a00 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, #6e910a 0%,#7ea800 50%,#384a00 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, #6e910a 0%,#7ea800 50%,#384a00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            }
+        }
+    }
+    .payments {
+        position: absolute;
+        top: 92%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        span {
+            display: inline-block;
+            margin: 1.5vh 0 2vh;
+            font-family: "roboto-regular";
+            font-size: 2.4vh;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        ul {
+            max-width: 64.6vh;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            li {
+                display: inline-block;
+                width: calc((100% - 15%)/6);
+                margin-right: 2%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+                &:nth-child(4n+8) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .root {
+        background-image: url('/assets/images/background-mobile.jpg');
+        background-size: 185vh;
+        .logo {
+            top: 3%;
+        }
+        .slider-wrapper {
+            top: 50%;
+            width: 80vw;
+            button {
+                font-size: 4vh;
+                span {
+                    padding: 1vh 2vh;
+                }
+            }
+        }
+        .payments {
+            top: 85%;
+            width: 80%;
+            span {
+                font-size: 3vh;
+            }
+            ul {
+                li {
+                    width: calc((100% - 14%)/3);
+                    margin-bottom: 1.3vh;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .root {
+        .payments {
+            top: 85%;
+            max-width: 420px;
+        }
+    }
+}
