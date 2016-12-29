@@ -89,6 +89,8 @@
                 background: -moz-linear-gradient(top, #016602 0%, #008101 50%, #009e03 100%); /* FF3.6-15 */
                 background: -webkit-linear-gradient(top, #016602 0%,#008101 50%,#009e03 100%); /* Chrome10-25,Safari5.1-6 */
                 background: linear-gradient(to bottom, #016602 0%,#008101 50%,#009e03 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                animation: button-animation 1.5s infinite;
+                animation-timing-function: cubic-bezier(0.5, 0.26, 1, 1);
                 span {
                     display: block;
                     padding: 0vh 2vh;
@@ -233,5 +235,23 @@
     .root {
         background-attachment: scroll;
         background-size: 425% 125%;
+    }
+}
+
+@keyframes button-animation {
+    0% {
+        transform: translateX(2%);
+    }
+    25% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-2%);
+    }
+    75% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(2%);
     }
 }
